@@ -1,0 +1,124 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _10Nov2018
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            string[] PatientName = new string[4];
+            string[] Doctor = new string[] { "arnav", "farah", "Jeevan", "Pratima" };
+            string[] Specialization = new string[] { "Neurologist", "Gynecologist", "ENT", "General" };
+            int[] Age = new int[4];
+            string[] Problem = new string[] { "Headache", "PregnencyRelated", "EarProblem", "Fever" };
+            string[] Investigation = new string[] { "MRI", "Xray", "EyeCheckup", "BloodTest" };
+            int[] Cost = new int[4];
+            while (true)
+            {
+            Console.WriteLine(" Welcome to Our Hosptal");
+            int Choice;
+            Console.WriteLine("Enter Your choice");
+            Console.WriteLine("Press 1 to View patient Details");
+            Console.WriteLine("press 2 to View Doctor Details");
+            Console.WriteLine("press 3 to Exit");
+            Choice = Convert.ToInt32(Console.ReadLine());
+            
+                switch (Choice)
+                {
+                    case 1:
+                        
+                            Console.WriteLine("Please Enter The patient Details");
+                            Console.WriteLine("Patient_Name");
+                            for (int i = 0; i < 4; i++)
+
+                            {
+                                PatientName[i] = Console.ReadLine();
+                            }
+                            Console.WriteLine("     ");
+                            Console.WriteLine("PatientAge");
+                            for (int i = 0; i < 4; i++)
+                            {
+                                Age[i] = Convert.ToInt32(Console.ReadLine());
+                            }
+                            Console.WriteLine("     ");
+                            Console.WriteLine("Problem");
+                            for (int i = 0; i < 4; i++)
+                            {
+                                Console.WriteLine(Problem[i]);
+                            }
+                            Console.WriteLine("Enter Your Problem");
+                            Console.ReadLine();
+
+
+
+                            if (Problem.Equals("Headache"))
+                            {
+                                Investigation[0] = "MRI";
+                                Cost[0] = 1000;
+                                Doctor[0] = "Arnav";
+                                Specialization[0] = "Neurologist";
+
+                            }
+                            else if (Problem.Equals("PregnencyRelated"))
+                            {
+                                Investigation[1] = "Xray";
+                                Cost[1] = 10000;
+                                Doctor[1] = "farah";
+                                Specialization[1] = "Gynecologist";
+
+                            }
+                            else if (Problem.Equals("EarProblem"))
+                            {
+                                Investigation[2] = "EyeCheckup";
+                                Cost[2] = 20000;
+                                Doctor[2] = "Jeevan";
+                                Specialization[2] = "ENT";
+                            }
+                            else if (Problem.Equals("Fever"))
+                            {
+                                Investigation[2] = "BloodTest";
+                                Cost[2] = 2000;
+                                Doctor[2] = "Pratima";
+                                Specialization[2] = "General";
+                            }
+                        Console.WriteLine("PatientName\t\t\tAge\t\t\tProblem\t\t\tInvestigataion\t\t\tCost");
+                            for (int i = 0; i < 4; i++)
+                            {
+                                Console.WriteLine(PatientName[i]+"\t\t\t"+Age[i]+"\t\t\t"+Problem[i]+"\t\t\t\t"+Investigation[i]+"\t\t\t"+Cost[i]);
+                            }
+                        break;
+
+                        case 2:
+                            Console.WriteLine("Please enter the doctor Details");
+                        Console.WriteLine("Doctor          Specialization");
+                        for (int i = 0; i < 4; i++)
+                            {
+                            Console.WriteLine(Doctor[i] + "         " + Specialization[i]);
+                            }
+                            Console.ReadLine();
+
+                        
+                        break;
+                    default:
+                        break;
+                } 
+
+            }
+        }
+        
+    }
+}
+ 
+
+
+            
+
+
+
+    
+

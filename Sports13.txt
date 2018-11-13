@@ -1,0 +1,76 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _13Nov18
+{
+   public class Team
+    {
+         public string TName;
+        public Player p = new Player();
+       
+        public void CapturePlayerDetails()
+        {
+            TName = Console.ReadLine();
+            p.Id = Convert.ToInt32(Console.ReadLine());
+            p.Name = Console.ReadLine();
+            p.Score = Convert.ToInt32(Console.ReadLine());
+            
+        }
+        public void PrintPlayerDetails()
+        {
+            Console.WriteLine("Team Name is:"+ TName);
+            Console.WriteLine("Player Id is:" + p.Id);
+            Console.WriteLine("Player Name is:"+p.Name);
+            Console.WriteLine("Score of team" + p.Score);
+        }
+            
+    }
+    public class Player
+    {
+
+        public int Score;
+        public string Name;
+        public int Id;
+    }
+    class Match:Player
+    {
+        Team team = new Team();
+        team=new Team();
+    }
+    
+
+
+
+    
+    
+    
+        
+
+
+        
+       
+
+    
+        
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Team t1 = new Team();
+            t1 = new Team();
+            t1.CapturePlayerDetails();
+            t1.PrintPlayerDetails();
+            Team t2 = new Team();
+            t2 = new Team();
+            t2.CapturePlayerDetails();
+            t2.PrintPlayerDetails();
+            
+
+        }
+    }
+}
+
+

@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HospitalData
+{
+    class Doctor:Patient
+    {
+        Patient p = new Patient();
+       public string[] Dname = new string[] { "arnav", "Jeevan", "Pratima" };
+        public string[] Specialization = new string[] { "Neurologist", "ENT", "General" };
+    }
+    class Patient:Diagnosis
+    {
+        Doctor d = new Doctor();
+        string Pname;
+        int Page;
+        string Problem;
+       
+    }
+    class Diagnosis
+    {
+        string Treatment;
+        int cost;
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
+
